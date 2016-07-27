@@ -1,0 +1,31 @@
+.input {
+  margin-bottom: 1rem;
+}
+
+.input-error {
+  color: $red;
+  font-size: smaller;
+  margin-bottom: $small-spacing / 2;
+}
+
+.form-page {
+  @include outer-container;
+
+  &.centered {
+    @include padding($base-spacing);
+    @include span-columns(10);
+    @include shift(1);
+
+    text-align: center;
+
+    @include media($medium-screen) {
+      @include span-columns(6);
+      @include shift(3);
+    }
+  }
+}
+
+.form-button {
+  @include padding($base-spacing);
+  text-align: center;
+}

@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+header {
+  @include padding(0);
+
+  background-color: $dark-blue;
+  color: $white;
+  display: inline-block;
+  width: 100%;
+
+  h1 {
+    @include margin($small-spacing / 1.5);
+
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  a {
+    @include margin($small-spacing / 1.5);
+
+    color: inherit;
+    display: inline-block;
+    line-height: normal;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  nav {
+    @include margin($small-spacing / 1.5);
+
+    display: inline-block;
+    float: right;
+  }
+}
+
+main {
+  @include outer-container(1175px);
+  @include margin($base-spacing auto);
+  @include padding(null $small-spacing);
+}
+
+footer {
+  @include padding($base-spacing);
+  @include margin(null null $base-spacing);
+
+  color: lighten($medium-gray, 10%);
+  font-size: smaller;
+  text-align: center;
+}

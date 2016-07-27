@@ -1,0 +1,17 @@
+.navdropdown {
+  position: relative;
+}
+
+.navdropdown-content {
+  @include padding($small-spacing / 1.5);
+
+  background-color: $dark-blue;
+  display: none;
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+
+.navdropdown:hover .navdropdown-content {
+  display: block;
+}

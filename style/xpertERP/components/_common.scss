@@ -1,0 +1,151 @@
+.chart {
+  @include padding($base-spacing null);
+}
+
+.table {
+  @include padding($base-spacing null);
+}
+
+.table-title {
+  @include margin(null null $base-spacing);
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.table-note {
+  font-style: italic;
+  text-align: center;
+}
+
+.expand {
+  cursor: pointer;
+}
+
+.details {
+  @include padding($base-spacing null null);
+
+  display: none;
+  line-height: $golden;
+
+  dt {
+    @include margin(null null null $base-spacing);
+    color: $medium-gray;
+    float: left;
+    font-weight: normal;
+  }
+}
+
+.main-navigation {
+  overflow: hidden;
+}
+
+.breadcrumb {
+  @include padding($small-spacing null);
+
+  float: left;
+
+  @include media(max-width $medium-screen) {
+    display: block;
+    float: inherit;
+    text-align: center;
+  }
+
+  li { display: inline-block; }
+
+  li:not(:last-child)::after {
+    @include padding(null $small-spacing);
+    content: '\203A';
+  }
+}
+
+.navigation-tools {
+  @include padding($small-spacing null);
+
+  float: right;
+
+  @include media(max-width $medium-screen) {
+    display: block;
+    float: inherit;
+    text-align: center;
+  }
+
+  li {
+    @include padding(null $small-spacing);
+    display: inline-block;
+  }
+
+  li:last-child {
+    @include padding(null 0 null null);
+  }
+
+  li:first-child {
+    @include padding(null null null 0);
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.actions {
+  a {
+    @include padding(null $small-spacing);
+
+    &:first-of-type {
+      @include padding(null null null 0);
+    }
+
+    &:last-of-type {
+      @include padding(null 0 null null);
+    }
+  }
+}
+
+.form {
+  @include padding($base-spacing null);
+
+  text-align: center;
+}
+
+.form-input {
+  @include padding(null $small-spacing);
+
+  display: inline-block;
+}
+
+.form-title {
+  @include margin(null null $base-spacing);
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.info {
+  @include padding($base-spacing null);
+
+  dl {
+    @include outer-container;
+  }
+
+  dt {
+    @include span-columns(6);
+
+    text-align: right;
+  }
+
+  dd {
+    @include span-columns(6);
+    @include omega();
+    @include margin(null null $small-spacing);
+  }
+}
+
+.info-notice {
+  display: block;
+  font-style: italic;
+}

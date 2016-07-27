@@ -1,0 +1,48 @@
+.dates {
+  @include padding($base-spacing null);
+
+  text-align: right;
+}
+
+.date {
+  @include margin(null $small-spacing);
+
+  display: inline-block;
+}
+
+.shortcuts {
+  display: block;
+
+  a {
+    @include padding($small-spacing $small-spacing 0);
+
+    display: inline-block;
+  }
+}
+
+.date-display {
+  @include margin(null $small-spacing null);
+
+  cursor: pointer;
+  display: inline-block;
+  font-style: italic;
+}
+
+.date-separator {
+  @include padding(null $small-spacing);
+
+  font-style: normal;
+}
+
+.date-edit {
+  @include margin($base-spacing null null);
+  display: none;
+}
+
+.datetable-split {
+  @include outer-container;
+
+  span {
+    @include span-columns(6);
+  }
+}
